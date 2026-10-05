@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Full Tech Stack — Iqbal Setiawan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0d0d0d;
+    --bg-alt: #141414;
+    --border: #262626;
+    --text: #f2f2f2;
+    --text-muted: #9a9a9a;
+    --text-dim: #6b6b6b;
+    --pill-bg: #1a1a1a;
+    --max-w: 900px;
+  }
+  html[data-theme="light"] {
+    --bg: #fafafa;
+    --bg-alt: #ffffff;
+    --border: #e4e4e4;
+    --text: #131313;
+    --text-muted: #55555a;
+    --text-dim: #8a8a8a;
+    --pill-bg: #f0f0f0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", system-ui, sans-serif;
+    line-height: 1.6;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(10px);
+  }
+  .nav {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo { font-weight: 800; font-size: 15px; }
+  .nav-links { display: flex; gap: 28px; font-size: 14px; color: var(--text-muted); }
+  .nav-links a:hover { color: var(--text); }
+  .nav-right { display: flex; align-items: center; gap: 18px; }
+  .divider-v { width: 1px; height: 18px; background: var(--border); }
+  .theme-toggle {
+    width: 34px; height: 34px; border-radius: 8px;
+    border: 1px solid var(--border); background: transparent;
+    color: var(--text-muted); display: flex; align-items: center;
+    justify-content: center; cursor: pointer;
+  }
+  .theme-toggle:hover { color: var(--text); border-color: var(--text-dim); }
+
+  main { padding: 48px 0 80px; }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+  .back-link:hover { color: var(--text); }
+
+  h1 { font-size: 32px; font-weight: 800; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .lead { color: var(--text-muted); font-size: 16px; margin-bottom: 44px; }
+
+  .category { margin-bottom: 36px; padding-bottom: 32px; border-bottom: 1px dashed var(--border); }
+  .category:last-child { border-bottom: none; }
+  .category h3 { font-size: 15px; font-weight: 700; margin: 0 0 14px; }
+
+  .pill-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--pill-bg); border: 1px solid var(--border);
+    color: var(--text); padding: 8px 14px; border-radius: 8px;
+    font-size: 14px; font-weight: 500;
+  }
+</style>
+</head>
+<body data-theme="dark">
+
+<header>
+  <div class="nav">
+    <a class="logo" href="index.html">IS</a>
+    <nav class="nav-links">
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#events">Events</a>
+    </nav>
+    <div class="nav-right">
+      <div class="divider-v"></div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema">
+        <svg id="iconMoon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back-link" href="index.html">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    Kembali ke Beranda
+  </a>
+
+  <h1>Full Tech Stack</h1>
+  <p class="lead">Daftar lengkap alat dan teknologi yang saya gunakan.</p>
+
+  <!-- Ganti isi tiap kategori berikut sesuai keahlian Anda. Tambah / hapus kategori sesuai kebutuhan. -->
+
+  <div class="category">
+    <h3>Frontend</h3>
+    <div class="pill-grid">
+      <span class="pill">▲ Next.js</span>
+      <span class="pill">⬢ React</span>
+      <span class="pill">🎨 Vanilla CSS</span>
+      <span class="pill">🌐 HTML</span>
+      <span class="pill">📘 JavaScript</span>
+      <span class="pill">🎨 Tailwind CSS</span>
+    </div>
+  </div>
+
+  <div class="category">
+    <h3>Design &amp; Prototyping</h3>
+    <div class="pill-grid">
+      <span class="pill">🎨 Canva</span>
+      <span class="pill">🎯 Figma</span>
+    </div>
+  </div>
+
+  <div class="category">
+    <h3>Backend &amp; Database</h3>
+    <div class="pill-grid">
+      <span class="pill">🐘 PHP</span>
+      <span class="pill">🅻 Laravel</span>
+      <span class="pill">🐬 MySQL</span>
+      <span class="pill">🐘 PostgreSQL</span>
+      <span class="pill">🗄 SQLite</span>
+    </div>
+  </div>
+
+  <div class="category">
+    <h3>CMS &amp; Marketing</h3>
+    <div class="pill-grid">
+      <span class="pill">Ⓦ WordPress</span>
+      <span class="pill">🔍 SEO Optimization</span>
+      <span class="pill">📊 Google Analytics</span>
+      <span class="pill">📢 Google AdSense</span>
+      <span class="pill">🔎 Google Search Console</span>
+      <span class="pill">📍 Google My Business</span>
+      <span class="pill">🐒 MailChimp</span>
+    </div>
+  </div>
+
+  <div class="category">
+    <h3>Data Analysis</h3>
+    <div class="pill-grid">
+      <span class="pill">🗄 SQL</span>
+      <span class="pill">🐍 Python</span>
+      <span class="pill">📈 Data Visualization</span>
+      <span class="pill">📊 Excel</span>
+    </div>
+  </div>
+
+  <div class="category">
+    <h3>Tools &amp; Version Control</h3>
+    <div class="pill-grid">
+      <span class="pill">🔧 Git</span>
+      <span class="pill">🐙 GitHub</span>
+      <span class="pill">⚙ GitHub Actions</span>
+      <span class="pill">🌐 SiteGround</span>
+      <span class="pill">▲ Vercel</span>
+      <span class="pill">🖥 VS Code</span>
+      <span class="pill">📦 Composer</span>
+      <span class="pill">📦 npm</span>
+      <span class="pill">⚡ Tauri</span>
+    </div>
+  </div>
+
+  <div class="category">
+    <h3>AI &amp; Intelligent Systems</h3>
+    <div class="pill-grid">
+      <span class="pill">✦ Gemini AI API</span>
+      <span class="pill">🤖 OpenAI API</span>
+      <span class="pill">🎯 Groq API</span>
+      <span class="pill">💬 Prompt Engineering</span>
+    </div>
+  </div>
+</main>
+
+<script>
+  const root = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const iconMoon = document.getElementById('iconMoon');
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    iconMoon.innerHTML = theme === 'dark'
+      ? '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>'
+      : '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke-linecap="round"/>';
+  }
+  applyTheme(localStorage.getItem('theme') || 'dark');
+  toggle.addEventListener('click', () => {
+    applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  });
+</script>
+
+</body>
+</html>
